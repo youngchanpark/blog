@@ -23,7 +23,7 @@ email: young.chan.park93@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Bioinformatician and Software Developer
 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 
