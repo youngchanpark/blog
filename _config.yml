@@ -54,8 +54,7 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-author: 
-  name: Young-Chan
+author: Young-Chan Park
 twitter:
   username: ycpark93
   owner_name: Young-Chan
