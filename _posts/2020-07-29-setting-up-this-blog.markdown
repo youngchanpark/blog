@@ -1,18 +1,17 @@
 ---
 layout: post
 title:  "Setting up this Blog"
-date:   2020-07-27 18:10:12 +0900
+date:   2020-07-29 12:00:00 +0900
 categories: jekyll
 ---
 
-[Jekyll][jekyll-docs] is a static site generator, helping users to build a
-static website with ease. I wanted to write some materials to organise and 
-archive some of my thoughts at this time, and I stumbled upon Jekyll on a 
-Korean bioinformatics community post.
-
-Indeed, it was fairly simple to set up, and so I thought I'd explain the
-overall process I went to set this blog up, and provide some useful resources
-for others that might want to do something similar.
+I was planning to start a simple blog to write some materials to organise and 
+archive my thoughts. I stumbled upon a community post which recommended using 
+Jekyll to start a blog. [Jekyll][jekyll-docs] is a static site generator, 
+helping users to build a static website with ease. Indeed, it was fairly simple
+to set up. I thought I'd explain the overall process I went through to set this
+blog up, and provide some useful resources for others that might want to do
+something similar.
 
 ## Basic Set up and Themes
 
