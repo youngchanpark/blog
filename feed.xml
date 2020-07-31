@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="/blog/" rel="alternate" type="text/html" /><updated>2020-07-31T06:50:28+00:00</updated><id>/blog/feed.xml</id><title type="html">Young-Chan Park</title><subtitle>Bioinformatician and Software Developer</subtitle><author><name>Young-Chan Park</name></author><entry><title type="html">Setting up this Blog</title><link href="/blog/jekyll/2020/07/29/setting-up-this-blog.html" rel="alternate" type="text/html" title="Setting up this Blog" /><published>2020-07-29T03:00:00+00:00</published><updated>2020-07-29T03:00:00+00:00</updated><id>/blog/jekyll/2020/07/29/setting-up-this-blog</id><content type="html" xml:base="/blog/jekyll/2020/07/29/setting-up-this-blog.html">&lt;p&gt;I was planning to start a simple blog to write some materials to organise and 
+archive my thoughts. I stumbled upon a community post which recommended using 
+Jekyll to start a blog. &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, 
+helping users to build a static website with ease. Indeed, it was fairly simple
+to set up. I thought I’d explain the overall process I went through to set this
+blog up, and provide some useful resources for others that might want to do
+something similar.&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-set-up-and-themes&quot;&gt;Basic Set up and Themes&lt;/h2&gt;
+
+&lt;p&gt;Jekyll’s documentation contains easy &lt;a href=&quot;https://jekyllrb.com/docs/step-by-step/01-setup/&quot;&gt;step-by-step tutorial&lt;/a&gt; 
+on how to set up a basic blog. I myself just went with the 
+&lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;quickstart&lt;/a&gt; version and moved on to choose a theme.&lt;/p&gt;
+
+&lt;p&gt;Jekyll’s &lt;a href=&quot;https://jekyllrb.com/resources/&quot;&gt;Resources&lt;/a&gt; page has several links
+which directs you to sites with a collection of pre-made Jekyll themes. I went 
+with the simple looking, free &lt;a href=&quot;https://github.com/lorepirri/cayman-blog&quot;&gt;Cayman Blog&lt;/a&gt; theme. As I was planning
+to host the website using GitHub Pages (more on this later), I followed the 
+theme’s &lt;a href=&quot;https://github.com/lorepirri/cayman-blog#hosting-with-github-pages&quot;&gt;instructions&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The dynamicity of the HTML files were driven by the &lt;em&gt;Liquid&lt;/em&gt; template language,
+which appeared very similar to that of &lt;a href=&quot;https://docs.djangoproject.com/en/3.0/ref/templates/language/&quot;&gt;Django’s template language (DTL)&lt;/a&gt;
+and Flask’s &lt;a href=&quot;https://jinja.palletsprojects.com/en/2.11.x/&quot;&gt;Jinja2&lt;/a&gt;. As I was already familiar with the latter two 
+language syntaxes, understanding and modifying the theme’s layout HTML files
+were not too difficult. The &lt;a href=&quot;https://jekyllrb.com/docs/step-by-step/01-setup/&quot;&gt;step-by-step tutorial&lt;/a&gt; should be a 
+good starting point for those unfamiliar with &lt;em&gt;Liquid&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The contents of the blog is modifiable by editing markdown(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.md&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.markdown&lt;/code&gt;) 
+files. Markdown files were widely used, so I’d imagine most readers would already 
+be familiar with the syntax. For those who are unfamiliar, here is a link to a 
+&lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&quot;&gt;cheetsheet&lt;/a&gt; and a &lt;a href=&quot;https://guides.github.com/features/mastering-markdown/&quot;&gt;guide&lt;/a&gt; from a quick 
+Google search.&lt;/p&gt;
+
+&lt;p&gt;After filling in the contents of the blog and modifying the theme to my liking,
+now was the time for deployment.&lt;/p&gt;
+
+&lt;h2 id=&quot;hosting-using-github-pages&quot;&gt;Hosting using GitHub Pages&lt;/h2&gt;
+
+&lt;p&gt;GitHub Pages is a service which allow users to host static websites directly
+from GitHub repositories. GitHub Pages officially supports Jekyll, so both Jekyll and 
+GitHub provides official documentation for deployment:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Jekyll: &lt;a href=&quot;https://jekyllrb.com/docs/continuous-integration/github-actions/&quot;&gt;Deploy Jekyll 4 on GitHub Pages&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;GitHub: &lt;a href=&quot;https://docs.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll&quot;&gt;Setting up a GitHub Pages site with Jekyll&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I went with Jekyll’s set up guide, where we set up GitHub Actions, a
+CI/CD pipeline which builds the website after each push to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master&lt;/code&gt; branch
+and only updates the production branch (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt;) with a successful build. 
+GitHub Actions also does provide a out-of-the-box workflow for Jekyll sites,
+but the workflow fails to build this particular blog for reasons I have yet to 
+diagnose. If you are encounter a build error and are struggling, you may find
+the troubleshooting documentation by &lt;a href=&quot;https://jekyllrb.com/docs/troubleshooting/#could-not-find-a-javascript-runtime-execjsruntimeunavailable&quot;&gt;Jekyll&lt;/a&gt; and 
+&lt;a href=&quot;https://docs.github.com/en/github/working-with-github-pages/troubleshooting-jekyll-build-errors-for-github-pages-sites&quot;&gt;GitHub&lt;/a&gt; to be helpful.&lt;/p&gt;
+
+&lt;h2 id=&quot;about-domains&quot;&gt;About Domains&lt;/h2&gt;
+
+&lt;p&gt;The default domain name for your GitHub Pages website will be 
+“https://{username}.github.io”, where {username} will be your GitHub username. 
+For example, the domain name of this current blog is 
+https://youngchanpark.github.io/blog. I configured this blog to appear in the 
+“/blog” subdomain by modifying the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;baseurl&lt;/code&gt; variable in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_configure.yml&lt;/code&gt; 
+file in my Jekyll repository. You can also set up a custom domain name for your
+blog by following the &lt;a href=&quot;https://docs.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site&quot;&gt;instructions provided by GitHub&lt;/a&gt;.
+I went with the default domain name, as I didn’t want to bother buying a custom
+domain name.&lt;/p&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;p&gt;I’ve attached a lot of official documentations for reference,
+although I myself didn’t actually use a lot of these docs while setting up 
+this blog. I started off by watching some basic Jekyll tutorials on YouTube, 
+then going back and forth between experimenting and reading the docs. I 
+actually found a lot of the docs only while preparing to write this blog post. 
+I do think it would’ve helped a lot if I knew these docs were available at the 
+time.&lt;/p&gt;</content><author><name>Young-Chan Park</name></author><category term="jekyll" /><summary type="html">I was planning to start a simple blog to write some materials to organise and archive my thoughts. I stumbled upon a community post which recommended using Jekyll to start a blog. Jekyll is a static site generator, helping users to build a static website with ease. Indeed, it was fairly simple to set up. I thought I’d explain the overall process I went through to set this blog up, and provide some useful resources for others that might want to do something similar.</summary></entry></feed>
